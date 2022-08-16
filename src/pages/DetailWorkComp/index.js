@@ -14,7 +14,7 @@ import axios from "axios";
 import * as Print from "expo-print";
 
 export default function DetailWorkComp({ navigation }) {
-  const url = "http://localhost:3000";
+  const url = "https://nodejsspk.herokuapp.com";
 
   const tipe = ["Jasa", "Item"];
 
