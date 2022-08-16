@@ -179,7 +179,7 @@ export default function PilihanSuratComp({ route, navigation }) {
       </tr>
     </div>
 
-    <table style="width: 21cm; font-size: x-small; margin-top: 10px; margin-bottom: 10px;border: 1px solid black;border-collapse: collapse;">
+    <table style="width: 21cm; font-size: x-small; margin-bottom: 10px;border: 1px solid black;border-collapse: collapse;">
       <tr>
         <th style="border: 1px solid black;border-collapse: collapse;">No</th>
         <th style="border: 1px solid black;border-collapse: collapse;text-align: left; padding-left: 5;">Uraian Spesifikasi / Detail</th>
@@ -200,6 +200,7 @@ export default function PilihanSuratComp({ route, navigation }) {
           <td style="border: 1px solid black;border-collapse: collapse;padding-left: 5;">${convertRupiah.convert(e.total)}</td>
         </tr>`;
       })}
+
       <tr>
         <td colspan="6" style="border: 1px solid black;border-collapse: collapse; text-align: center;">total</td>
         <td style="border: 1px solid black;border-collapse: collapse;padding-left: 5;">${convertRupiah.convert(detail.reduce((sum, i) => (sum += i.jumlah * i.harga), 0))}</td>
@@ -251,9 +252,6 @@ export default function PilihanSuratComp({ route, navigation }) {
         Tidak akan menimbulkan gangguan selama Penerima Tugas melaksanakan kewajibannya, segala resiko akibat dari kelalaian Penerima Tugas dalam melaksanakan ketentuan ini ditanggung sepenuhnya oleh Penerima Tugas.
       </li>
     </ol>
-
-
-
     <div>
       <tr>
         <td colspan="2">

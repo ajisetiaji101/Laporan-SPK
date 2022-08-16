@@ -14,7 +14,7 @@ import axios from "axios";
 import * as Print from "expo-print";
 
 export default function DetailWorkComp({ navigation }) {
-  const url = "https://nodejsspk.herokuapp.com";
+  const url = "http://localhost:3000";
 
   const tipe = ["Jasa", "Item"];
 
@@ -53,21 +53,22 @@ export default function DetailWorkComp({ navigation }) {
   const [data, setData] = useState([]);
 
   const tambahdata = async () => {
+    setDetail({ ...detail, total: detail.jumlah * detail.harga });
     setData([...data, detail]);
   };
 
   const onChangeDetail = (value) => {
-    setDetail({ ...detail, harga: value });
+    // setDetail({ ...detail, harga: value });
     setDetail({ ...detail, detail: value });
   };
 
   const onChangeJumlah = (value) => {
-    setDetail({ ...detail, harga: value });
+    // setDetail({ ...detail, harga: value });
     setDetail({ ...detail, jumlah: value });
   };
 
   const onChangeSatuan = (value) => {
-    setDetail({ ...detail, harga: value });
+    // setDetail({ ...detail, harga: value });
     setDetail({ ...detail, satuan: value });
   };
 
@@ -435,7 +436,7 @@ export default function DetailWorkComp({ navigation }) {
             ? ""
             : data.map((e, i) => (
                 <DataTable.Row key={i}>
-                  <DataTable.Cell style={{ width: 8 }}>{i + 1}</DataTable.Cell>
+                  <DataTable.Cell>{i + 1}</DataTable.Cell>
                   <DataTable.Cell>{e.detail}</DataTable.Cell>
                   <DataTable.Cell>{e.tipe}</DataTable.Cell>
                   <DataTable.Cell>{e.jumlah}</DataTable.Cell>
@@ -448,6 +449,9 @@ export default function DetailWorkComp({ navigation }) {
                 </DataTable.Row>
               ))}
         </DataTable>
+        <View className="justify-center" style={{ flexDirection: "row" }}>
+          <Text className="font-medium text-lg">Total : {convertRupiah.convert(data.reduce((sum, i) => (sum += i.jumlah * i.harga), 0))}</Text>
+        </View>
       </ScrollView>
       <View style={styles.containerbox}>
         <ButtonComp title="TAMBAH" classNa="bg-orange-500 py-4 active:bg-orange-700 rounded-none flex-1 mr-1 mt-2 rounded-tr-md" onPress={tambahdata} />
