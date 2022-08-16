@@ -149,16 +149,16 @@ export default function CreateSuratComp({ navigation }) {
 
         <View style={styles.container} className="justify-between pl-4 pr-2 pb-2">
           <Text style={styles.input}>Tembusan</Text>
-          <TextInput placeholder="Penerima Tugas" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeTembusan(value)} />
+          <TextInput placeholder="Tembusan" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeTembusan(value)} />
         </View>
 
         <View style={styles.container} className="justify-between pl-4 pr-2 pb-2">
           <Text style={styles.input}>Alamat Tembusan</Text>
-          <TextInput placeholder="Penerima Tugas" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeAlamattemb(value)} />
+          <TextInput placeholder="Alamat Tembusan" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeAlamattemb(value)} />
         </View>
         <View style={styles.container} className="justify-between pl-4 pr-2 pb-2">
           <Text style={styles.input}>Telepon Tembusan</Text>
-          <TextInput placeholder="Penerima Tugas" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeTelptemb(value)} />
+          <TextInput placeholder="Telepon Tembusan" className=" bg-white rounded-md w-2/4 pl-4 py-1" onChangeText={(value) => onChangeTelptemb(value)} />
         </View>
 
         <View style={styles.container} className="justify-between pl-4 pr-2 pb-2">
