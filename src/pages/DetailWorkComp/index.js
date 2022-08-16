@@ -219,7 +219,7 @@ export default function DetailWorkComp({ navigation }) {
         </tr>
       </div>
   
-      <table style="width: 21cm; font-size: x-small; margin-top: 10px; margin-bottom: 10px;border: 1px solid black;border-collapse: collapse;">
+      <table style="width: 21cm; font-size: x-small; margin-bottom: 10px; margin-bottom: 10px;border: 1px solid black;border-collapse: collapse;">
         <tr>
           <th style="border: 1px solid black;border-collapse: collapse;">No</th>
           <th style="border: 1px solid black;border-collapse: collapse;text-align: left; padding-left: 5;">Uraian Spesifikasi / Detail</th>
